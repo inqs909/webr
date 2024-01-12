@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!files/"
+
+website:
+  repo-url: https://github.com/inqs909/webr
+  title: "WEBR"
+  site-url: www.inqs.info/webr
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto
