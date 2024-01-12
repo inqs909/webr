@@ -3,7 +3,7 @@
     "path": "~/Repos/webr/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "1245281847",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1705082253394.0,
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "59:0",
+        "rmdVisualModeLocation": "61:0",
         "cursorPosition": "0,0",
         "scrollLine": "0"
     },
