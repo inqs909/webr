@@ -1,0 +1,191 @@
+---
+title: "Inference"
+format:
+  revealjs:
+    scrollable: true
+    theme: [default, styles.scss]
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false
+    code-fold: true
+    chalkboard:
+      src: notes/inf.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+knitr:
+  opts_chunk: 
+    echo: false
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+    error: true
+    
+revealjs-plugins:
+  - pointer
+  - verticator
+  
+webr: 
+  show-startup-message: true
+  packages: ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins']
+  
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+  - webr
+  
+auto-agenda:
+  bullets: numbered
+  heading: Learning Outcomes
+  
+editor: visual
+---
+
+```{r}
+#| include: false
+#| cache: true
+
+set.seed(3249)
+# library(coursekata)
+library(palmerpenguins)
+library(mosaic)
+library(ggformula)
+library(tidyverse)
+penguins <- penguins |> drop_na() 
+res <- lm(body_mass_g ~ species, data = penguins)
+f_sim_100 <- do(100) * f(shuffle(body_mass_g) ~ species, 
+                         data = penguins)
+f_sim_1000 <- do(1000) * f(shuffle(body_mass_g) ~ species, 
+                         data = penguins)
+```
+
+```{r}
+#| include: false
+#| label: load_libraries
+
+library(ggformula)
+library(mosaic)
+library(coursekata)
+```
+
+```{webr-r}
+#| context: setup
+
+
+webr::install("learnrhash", 
+              repos = c("https://inqs909.r-universe.dev", 
+                        "https://repo.r-wasm.org"))
+
+library(learnrhash)
+```
+
+# Webr
+
+## Webr
+
+Webr embeds an R console in web pages, and allows users to run R on their browser without having to install R on their computer.
+
+::: fragment
+Everything in Webr is installed on a browser.
+:::
+
+::: fragment
+You can also use several R packages in webr.
+:::
+
+## Webr Resources
+
+-   Webr: <https://docs.r-wasm.org/webr/latest/>
+
+-   Webr on Quarto: <https://quarto-webr.thecoatlessprofessor.com/>
+
+-   This Webpage Code:
+
+## Motivating Example
+
+```{r}
+penguins |> gf_jitter(body_mass_g ~ species)
+```
+
+## Empirical vs Shuffled
+
+```{webr-r}
+penguins <- penguins |> drop_na() 
+```
+
+## Empirical F
+
+```{webr-r}
+penguins <- penguins |> drop_na() 
+f(body_mass_g ~ species, data = penguins)
+```
+
+## Distribution of F
+
+```{webr-r}
+penguins <- penguins |> drop_na() 
+f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species, 
+                         data = penguins)
+```
+
+## Code
+
+```{r}
+#| echo: TRUE
+#| eval: false
+
+penguins |> gf_jitter(body_mass_g ~ species)
+f(body_mass_g ~ species, data = penguins)
+f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species, 
+                         data = penguins)
+
+```
+
+## Strengths
+
+-   You don't
+
+## Weaknesses
+
+# Learnr Tutorials
+
+## Learnr Tutorials
+
+Learnr tutorials are self-contained coding assignments that allow students
+
+## Learnr Tutorial Example
+
+[R Crash Course](https://6j537z-isaac-quintanilla0salinas.shinyapps.io/R_Crash/)
+
+## Strengths
+
+-   Tutorials are contained in a controlled environment
+-   You can customize tutorials via an RMarkdown file
+-   Code can be graded
+-   Can be ran on personal compute if R is Installed
+-   Can be ran on a server
+    -   shinyapps.io
+
+## Limitations
+
+-   Questions are rather limited
+    -   Can be extended with packages
+    -   Code questions give unlimited tries
+-   Automatic grading can be limited
+-   shinyapps.io may be slow
+
+## learnrhash
+
+```{webr-r}
+test <- learnrhash::decode_obj("")
+```
+
+# GradeTools
+
+## 
+
+# Otter-Grader
+
+## Otter-Grader

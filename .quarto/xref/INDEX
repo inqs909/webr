@@ -1,5 +1,8 @@
 {
   "index.qmd": {
     "index.html": "2e272022"
+  },
+  "lectures/inf.qmd": {
+    "inf.html": "b12e3033"
   }
 }
