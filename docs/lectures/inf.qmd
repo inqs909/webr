@@ -1,5 +1,5 @@
 ---
-title: "Inference"
+title: "Update 1/19/24"
 format:
   revealjs:
     scrollable: true
@@ -29,7 +29,7 @@ revealjs-plugins:
   
 webr: 
   show-startup-message: true
-  packages: ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins']
+  packages: ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins', "coursekata"]
   
 filters: 
   - reveal-header

@@ -2,126 +2,126 @@
   {
     "objectID": "lectures/inf.html#webr-1",
     "href": "lectures/inf.html#webr-1",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Webr",
     "text": "Webr\nWebr embeds an R console in web pages, and allows users to run R on their browser without having to install R on their computer.\n\nEverything in Webr is installed on a browser.\n\n\nYou can also use several R packages in webr."
   },
   {
     "objectID": "lectures/inf.html#webr-resources",
     "href": "lectures/inf.html#webr-resources",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Webr Resources",
     "text": "Webr Resources\n\nWebr: https://docs.r-wasm.org/webr/latest/\nWebr on Quarto: https://quarto-webr.thecoatlessprofessor.com/\nThis Webpage Code: https://github.com/inqs909/webr/blob/main/lectures/inf.qmd"
   },
   {
     "objectID": "lectures/inf.html#motivating-example",
     "href": "lectures/inf.html#motivating-example",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Motivating Example",
     "text": "Motivating Example"
   },
   {
     "objectID": "lectures/inf.html#empirical-vs-shuffled",
     "href": "lectures/inf.html#empirical-vs-shuffled",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Empirical vs Shuffled",
     "text": "Empirical vs Shuffled\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/inf.html#empirical-f",
     "href": "lectures/inf.html#empirical-f",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Empirical F",
     "text": "Empirical F\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/inf.html#distribution-of-f",
     "href": "lectures/inf.html#distribution-of-f",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Distribution of F",
     "text": "Distribution of F\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/inf.html#code",
     "href": "lectures/inf.html#code",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Code",
     "text": "Code\n\n\nCode\npenguins |&gt; gf_jitter(body_mass_g ~ species)\nf(body_mass_g ~ species, data = penguins)\nf_sim &lt;- do(1000) * f(shuffle(body_mass_g) ~ species, \n                         data = penguins)"
   },
   {
     "objectID": "lectures/inf.html#strengths",
     "href": "lectures/inf.html#strengths",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Strengths",
     "text": "Strengths\n\nNo Server Necessary\nSeveral Main R Packages are available"
   },
   {
     "objectID": "lectures/inf.html#weaknesses",
     "href": "lectures/inf.html#weaknesses",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Weaknesses",
     "text": "Weaknesses\n\nNew Technology\nBrowser limitations\nRAM and Processor Limitations\nMay not have mobile or tablet support"
   },
   {
     "objectID": "lectures/inf.html#learnr-tutorials-1",
     "href": "lectures/inf.html#learnr-tutorials-1",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Learnr Tutorials",
     "text": "Learnr Tutorials\nLearnr tutorials are self-contained coding assignments that allow students"
   },
   {
     "objectID": "lectures/inf.html#learnr-tutorial-example",
     "href": "lectures/inf.html#learnr-tutorial-example",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Learnr Tutorial Example",
     "text": "Learnr Tutorial Example\nR Crash Course"
   },
   {
     "objectID": "lectures/inf.html#strengths-1",
     "href": "lectures/inf.html#strengths-1",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Strengths",
     "text": "Strengths\n\nTutorials are contained in a controlled environment\nYou can customize tutorials via an RMarkdown file\nCode can be graded\nCan be ran on personal compute if R is Installed\nCan be ran on a server\n\nshinyapps.io"
   },
   {
     "objectID": "lectures/inf.html#limitations",
     "href": "lectures/inf.html#limitations",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Limitations",
     "text": "Limitations\n\nQuestions are rather limited\n\nCan be extended with packages\nCode questions give unlimited tries\n\nAutomatic grading can be limited\nshinyapps.io may be slow"
   },
   {
     "objectID": "lectures/inf.html#learnrhash",
     "href": "lectures/inf.html#learnrhash",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "learnrhash",
     "text": "learnrhash\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/inf.html#learnr-resources",
     "href": "lectures/inf.html#learnr-resources",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Learnr Resources",
     "text": "Learnr Resources\n\nhttps://rstudio.github.io/learnr/\nhttps://github.com/rstudio/gradethis\nhttps://github.com/inqs909/csucistats/blob/main/inst/tutorials/R_Crash/R_Crash.Rmd\nhttps://www.inqs.info/csucistats/"
   },
   {
     "objectID": "lectures/inf.html#otter-grader-1",
     "href": "lectures/inf.html#otter-grader-1",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Otter-Grader",
     "text": "Otter-Grader\nA tool designed to grade R and Python assignments.\n\nIt can grade both Jupyter Notebooks and RMD files.\n\n\nIt can be implemented in both Google Colab and Jupyterhub\n\n\nHowever, I still need more time to learn how to use it."
   },
   {
     "objectID": "lectures/inf.html#easy-part",
     "href": "lectures/inf.html#easy-part",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Easy Part",
     "text": "Easy Part\nSetting Up the notebook seems easy to do.\n\nEasy to grade if using GradeScope\n\n\nCells are easy to set up with with multiple types of questions.\n\n\n\nHowever\n\nMust set up internal tests\nMust know cell structures in notebooks\nKnow Markdown\nKnow YAML"
   },
   {
     "objectID": "lectures/inf.html#hard-part",
     "href": "lectures/inf.html#hard-part",
-    "title": "Inference",
+    "title": "Update 1/19/24",
     "section": "Hard Part",
     "text": "Hard Part\nGetting to grade on a local computer.\n\nI currently can’t get the toy example working."
   }
