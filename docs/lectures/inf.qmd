@@ -101,7 +101,7 @@ You can also use several R packages in webr.
 
 -   Webr on Quarto: <https://quarto-webr.thecoatlessprofessor.com/>
 
--   This Webpage Code:
+-   This Webpage Code: <https://github.com/inqs909/webr/blob/main/lectures/inf.qmd>
 
 ## Motivating Example
 
@@ -145,9 +145,19 @@ f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species,
 
 ## Strengths
 
--   You don't
+-   No Server Necessary
+
+-   Several Main R Packages are available
 
 ## Weaknesses
+
+-   New Technology
+
+-   Browser limitations
+
+-   RAM and Processor Limitations
+
+-   May not have mobile or tablet support
 
 # Learnr Tutorials
 
@@ -182,10 +192,62 @@ Learnr tutorials are self-contained coding assignments that allow students
 test <- learnrhash::decode_obj("")
 ```
 
-# GradeTools
+## Learnr Resources
 
-## 
+-   <https://rstudio.github.io/learnr/>
+
+-   <https://github.com/rstudio/gradethis>
+
+-   <https://github.com/inqs909/csucistats/blob/main/inst/tutorials/R_Crash/R_Crash.Rmd>
+
+-   <https://www.inqs.info/csucistats/>
 
 # Otter-Grader
 
 ## Otter-Grader
+
+A tool designed to grade R and Python assignments.
+
+::: fragment
+It can grade both Jupyter Notebooks and RMD files.
+:::
+
+::: fragment
+It can be implemented in both Google Colab and Jupyterhub
+:::
+
+::: fragment
+However, I still need more time to learn how to use it.
+:::
+
+## Easy Part
+
+Setting Up the notebook seems easy to do.
+
+::: fragment
+Easy to grade if using GradeScope
+:::
+
+::: fragment
+Cells are easy to set up with with multiple types of questions.
+:::
+
+::: fragment
+### However
+
+-   Must set up internal tests
+
+-   Must know cell structures in notebooks
+
+-   Know Markdown
+
+-   Know YAML
+:::
+
+## Hard Part
+
+Getting to grade on a local computer.
+
+::: fragment
+I currently can't get the toy example working.
+:::

@@ -11,7 +11,7 @@
     "href": "lectures/inf.html#webr-resources",
     "title": "Inference",
     "section": "Webr Resources",
-    "text": "Webr Resources\n\nWebr: https://docs.r-wasm.org/webr/latest/\nWebr on Quarto: https://quarto-webr.thecoatlessprofessor.com/\nThis Webpage Code:"
+    "text": "Webr Resources\n\nWebr: https://docs.r-wasm.org/webr/latest/\nWebr on Quarto: https://quarto-webr.thecoatlessprofessor.com/\nThis Webpage Code: https://github.com/inqs909/webr/blob/main/lectures/inf.qmd"
   },
   {
     "objectID": "lectures/inf.html#motivating-example",
@@ -53,14 +53,14 @@
     "href": "lectures/inf.html#strengths",
     "title": "Inference",
     "section": "Strengths",
-    "text": "Strengths\n\nYou don’t"
+    "text": "Strengths\n\nNo Server Necessary\nSeveral Main R Packages are available"
   },
   {
     "objectID": "lectures/inf.html#weaknesses",
     "href": "lectures/inf.html#weaknesses",
     "title": "Inference",
     "section": "Weaknesses",
-    "text": "Weaknesses"
+    "text": "Weaknesses\n\nNew Technology\nBrowser limitations\nRAM and Processor Limitations\nMay not have mobile or tablet support"
   },
   {
     "objectID": "lectures/inf.html#learnr-tutorials-1",
@@ -98,10 +98,31 @@
     "text": "learnrhash\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
+    "objectID": "lectures/inf.html#learnr-resources",
+    "href": "lectures/inf.html#learnr-resources",
+    "title": "Inference",
+    "section": "Learnr Resources",
+    "text": "Learnr Resources\n\nhttps://rstudio.github.io/learnr/\nhttps://github.com/rstudio/gradethis\nhttps://github.com/inqs909/csucistats/blob/main/inst/tutorials/R_Crash/R_Crash.Rmd\nhttps://www.inqs.info/csucistats/"
+  },
+  {
     "objectID": "lectures/inf.html#otter-grader-1",
     "href": "lectures/inf.html#otter-grader-1",
     "title": "Inference",
     "section": "Otter-Grader",
-    "text": "Otter-Grader"
+    "text": "Otter-Grader\nA tool designed to grade R and Python assignments.\n\nIt can grade both Jupyter Notebooks and RMD files.\n\n\nIt can be implemented in both Google Colab and Jupyterhub\n\n\nHowever, I still need more time to learn how to use it."
+  },
+  {
+    "objectID": "lectures/inf.html#easy-part",
+    "href": "lectures/inf.html#easy-part",
+    "title": "Inference",
+    "section": "Easy Part",
+    "text": "Easy Part\nSetting Up the notebook seems easy to do.\n\nEasy to grade if using GradeScope\n\n\nCells are easy to set up with with multiple types of questions.\n\n\n\nHowever\n\nMust set up internal tests\nMust know cell structures in notebooks\nKnow Markdown\nKnow YAML"
+  },
+  {
+    "objectID": "lectures/inf.html#hard-part",
+    "href": "lectures/inf.html#hard-part",
+    "title": "Inference",
+    "section": "Hard Part",
+    "text": "Hard Part\nGetting to grade on a local computer.\n\nI currently can’t get the toy example working."
   }
 ]

@@ -1221,9 +1221,6 @@ library(learnrhash)
 <p>Learnr Tutorials</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>GradeTools</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
 <p>Otter-Grader</p>
 </div></li>
 </ol>
@@ -1244,7 +1241,7 @@ library(learnrhash)
 <ul>
 <li><p>Webr: <a href="https://docs.r-wasm.org/webr/latest/" class="uri">https://docs.r-wasm.org/webr/latest/</a></p></li>
 <li><p>Webr on Quarto: <a href="https://quarto-webr.thecoatlessprofessor.com/" class="uri">https://quarto-webr.thecoatlessprofessor.com/</a></p></li>
-<li><p>This Webpage Code:</p></li>
+<li><p>This Webpage Code: <a href="https://github.com/inqs909/webr/blob/main/lectures/inf.qmd" class="uri">https://github.com/inqs909/webr/blob/main/lectures/inf.qmd</a></p></li>
 </ul>
 </section>
 <section id="motivating-example" class="slide level2">
@@ -1335,11 +1332,18 @@ f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species,
 <section id="strengths" class="slide level2">
 <h2>Strengths</h2>
 <ul>
-<li>You don’t</li>
+<li><p>No Server Necessary</p></li>
+<li><p>Several Main R Packages are available</p></li>
 </ul>
 </section>
 <section id="weaknesses" class="slide level2">
 <h2>Weaknesses</h2>
+<ul>
+<li><p>New Technology</p></li>
+<li><p>Browser limitations</p></li>
+<li><p>RAM and Processor Limitations</p></li>
+<li><p>May not have mobile or tablet support</p></li>
+</ul>
 </section></section>
 <section>
 <section id="learnr-tutorials" class="title-slide slide level1 agenda-slide center">
@@ -1354,9 +1358,6 @@ f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species,
 </div></li>
 <li><div class="agenda-active">
 <p>Learnr Tutorials</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>GradeTools</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Otter-Grader</p>
@@ -1418,32 +1419,15 @@ qwebrCreateMonacoEditorInstance(
   5);
 </script>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section></section>
-<section>
-<section id="gradetools" class="title-slide slide level1 agenda-slide center">
-<h1>GradeTools</h1>
-<div class="agenda-heading">
-<p>Learning Outcomes</p>
-</div>
-<div class="agenda">
-<ol>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Webr</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Learnr Tutorials</p>
-</div></li>
-<li><div class="agenda-active">
-<p>GradeTools</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Otter-Grader</p>
-</div></li>
-</ol>
-</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="learnr-resources" class="slide level2">
+<h2>Learnr Resources</h2>
+<ul>
+<li><p><a href="https://rstudio.github.io/learnr/" class="uri">https://rstudio.github.io/learnr/</a></p></li>
+<li><p><a href="https://github.com/rstudio/gradethis" class="uri">https://github.com/rstudio/gradethis</a></p></li>
+<li><p><a href="https://github.com/inqs909/csucistats/blob/main/inst/tutorials/R_Crash/R_Crash.Rmd" class="uri">https://github.com/inqs909/csucistats/blob/main/inst/tutorials/R_Crash/R_Crash.Rmd</a></p></li>
+<li><p><a href="https://www.inqs.info/csucistats/" class="uri">https://www.inqs.info/csucistats/</a></p></li>
+</ul>
 </section></section>
 <section>
 <section id="otter-grader" class="title-slide slide level1 agenda-slide center">
@@ -1459,9 +1443,6 @@ qwebrCreateMonacoEditorInstance(
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Learnr Tutorials</p>
 </div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>GradeTools</p>
-</div></li>
 <li><div class="agenda-active">
 <p>Otter-Grader</p>
 </div></li>
@@ -1470,6 +1451,43 @@ qwebrCreateMonacoEditorInstance(
 </section>
 <section id="otter-grader-1" class="slide level2">
 <h2>Otter-Grader</h2>
+<p>A tool designed to grade R and Python assignments.</p>
+<div class="fragment">
+<p>It can grade both Jupyter Notebooks and RMD files.</p>
+</div>
+<div class="fragment">
+<p>It can be implemented in both Google Colab and Jupyterhub</p>
+</div>
+<div class="fragment">
+<p>However, I still need more time to learn how to use it.</p>
+</div>
+</section>
+<section id="easy-part" class="slide level2">
+<h2>Easy Part</h2>
+<p>Setting Up the notebook seems easy to do.</p>
+<div class="fragment">
+<p>Easy to grade if using GradeScope</p>
+</div>
+<div class="fragment">
+<p>Cells are easy to set up with with multiple types of questions.</p>
+</div>
+<div class="fragment">
+<!-- -->
+<h3 id="however">However</h3>
+<ul>
+<li><p>Must set up internal tests</p></li>
+<li><p>Must know cell structures in notebooks</p></li>
+<li><p>Know Markdown</p></li>
+<li><p>Know YAML</p></li>
+</ul>
+</div>
+</section>
+<section id="hard-part" class="slide level2">
+<h2>Hard Part</h2>
+<p>Getting to grade on a local computer.</p>
+<div class="fragment">
+<p>I currently can’t get the toy example working.</p>
+</div>
 
 <div class="footer footer-default">
 
