@@ -505,7 +505,7 @@
   const initializeWebRTimerStart = performance.now();
 
   // Determine if we need to install R packages
-  var installRPackagesList = ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins', 'coursekata'];
+  var installRPackagesList = ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins'];
   // Check to see if we have an empty array, if we do set to skip the installation.
   var setupRPackages = !(installRPackagesList.indexOf("") !== -1);
   var autoloadRPackages = true;
@@ -1174,38 +1174,6 @@ globalThis.qwebrCreateMonacoEditorInstance = function (
 </div>
 
 </section>
-<section class="slide level2">
-
-<div id="qwebr-insertion-location-1"></div>
-<script type="module">
-// Retrieve the insertion point
-const currentDocumentLocation = document.getElementById("qwebr-insertion-location-1");
-
-// Initalize an interactive element
-const initializedElement = qwebrCreateNonInteractiveSetupElement(
-    1
-  );
-
-// Add the interactive element into the document scope
-currentDocumentLocation.appendChild(initializedElement);
-
-// Initialization WebR
-await globalThis.webR.init();
-
-// Run R code without focusing on storing data.
-await globalThis.webR.evalRVoid(`
-
-
-webr::install("learnrhash", 
-              repos = c("https://inqs909.r-universe.dev", 
-                        "https://repo.r-wasm.org"))
-
-library(learnrhash)
-`)
-</script>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-
-</section>
 <section>
 <section id="webr" class="title-slide slide level1 agenda-slide center">
 <h1>Webr</h1>
@@ -1225,6 +1193,37 @@ library(learnrhash)
 </div></li>
 </ol>
 </div>
+<div id="qwebr-insertion-location-1"></div>
+<script type="module">
+// Retrieve the insertion point
+const currentDocumentLocation = document.getElementById("qwebr-insertion-location-1");
+
+// Initalize an interactive element
+const initializedElement = qwebrCreateNonInteractiveSetupElement(
+    1
+  );
+
+// Add the interactive element into the document scope
+currentDocumentLocation.appendChild(initializedElement);
+
+// Initialization WebR
+await globalThis.webR.init();
+
+// Run R code without focusing on storing data.
+await globalThis.webR.evalRVoid(`
+webr::install("learnrhash", 
+              repos = c("https://inqs909.r-universe.dev", 
+                        "https://repo.r-wasm.org"))
+webr::install('csucistats',
+  repos = c('https://inqs909.r-universe.dev', 
+            'https://repo.r-wasm.org'))
+
+library(learnrhash)
+library(csucistats)
+`)
+</script>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+
 </section>
 <section id="webr-1" class="slide level2">
 <h2>Webr</h2>
@@ -1246,8 +1245,12 @@ library(learnrhash)
 </section>
 <section id="motivating-example" class="slide level2">
 <h2>Motivating Example</h2>
-
-<img data-src="inf_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>#&gt; Error in gf_jitter(penguins, body_mass_g ~ species): could not find function "gf_jitter"</code></pre>
+</div>
+</div>
+</section>
 <section id="empirical-vs-shuffled" class="slide level2">
 <h2>Empirical vs Shuffled</h2>
 <div id="qwebr-insertion-location-2"></div>
@@ -1322,10 +1325,10 @@ f_sim <- do(1000) * f(shuffle(body_mass_g) ~ species,
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">gf_jitter</span>(body_mass_g <span class="sc">~</span> species)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">f</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> penguins)</span>
-<span id="cb1-3"><a href="#cb1-3"></a>f_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">f</span>(<span class="fu">shuffle</span>(body_mass_g) <span class="sc">~</span> species, </span>
-<span id="cb1-4"><a href="#cb1-4"></a>                         <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">gf_jitter</span>(body_mass_g <span class="sc">~</span> species)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">f</span>(body_mass_g <span class="sc">~</span> species, <span class="at">data =</span> penguins)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>f_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">f</span>(<span class="fu">shuffle</span>(body_mass_g) <span class="sc">~</span> species, </span>
+<span id="cb2-4"><a href="#cb2-4"></a>                         <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>

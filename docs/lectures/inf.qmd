@@ -29,7 +29,7 @@ revealjs-plugins:
   
 webr: 
   show-startup-message: true
-  packages: ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins', "coursekata"]
+  packages: ['tidyr', 'mosaic', 'ggformula', 'palmerpenguins']
   
 filters: 
   - reveal-header
@@ -59,29 +59,25 @@ f_sim_100 <- do(100) * f(shuffle(body_mass_g) ~ species,
                          data = penguins)
 f_sim_1000 <- do(1000) * f(shuffle(body_mass_g) ~ species, 
                          data = penguins)
-```
-
-```{r}
-#| include: false
-#| label: load_libraries
-
 library(ggformula)
 library(mosaic)
 library(coursekata)
 ```
 
+# Webr
+
 ```{webr-r}
 #| context: setup
-
-
 webr::install("learnrhash", 
               repos = c("https://inqs909.r-universe.dev", 
                         "https://repo.r-wasm.org"))
+webr::install('csucistats',
+  repos = c('https://inqs909.r-universe.dev', 
+            'https://repo.r-wasm.org'))
 
 library(learnrhash)
+library(csucistats)
 ```
-
-# Webr
 
 ## Webr
 

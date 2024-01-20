@@ -18,7 +18,7 @@
     "href": "lectures/inf.html#motivating-example",
     "title": "Update 1/19/24",
     "section": "Motivating Example",
-    "text": "Motivating Example"
+    "text": "Motivating Example\n\n\n#&gt; Error in gf_jitter(penguins, body_mass_g ~ species): could not find function \"gf_jitter\""
   },
   {
     "objectID": "lectures/inf.html#empirical-vs-shuffled",
